@@ -1,1 +1,1 @@
-export const GENERATOR_NAME = 'my-gen'
+export const GENERATOR_NAME = 'crud-class-generator'

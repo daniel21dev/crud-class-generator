@@ -1,6 +1,6 @@
 {
-  "name": "my-gen",
-  "description": "Provide a description about your generator",
+  "name": "crud-class-generator",
+  "description": "generates a class with basic crud methods in base of prisma datamodel",
   "version": "1.0.1",
   "main": "dist/generator.js",
   "license": "MIT",
@@ -40,9 +40,10 @@
     "type": "git",
     "url": "Repo link here"
   },
-  "author": "Your Name <Your Email>",
+  "author": "daniel romero",
   "keywords": [
     "prisma",
+    "prisma-crud",
     "prisma2",
     "generator"
   ],
