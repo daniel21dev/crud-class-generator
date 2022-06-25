@@ -14,7 +14,7 @@
     "start": "node dist/bin.js",
     "dev": "npx tsc -w",
     "build": "npx tsc",
-    "prepack": "yarn build",
+    "prepack": "npm run build",
     "test": "jest"
   },
   "dependencies": {
