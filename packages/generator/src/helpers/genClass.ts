@@ -6,6 +6,10 @@ export const genClass = (modelName: string): string => {
     export class ${modelName}Crud{
 
         constructor(private prisma:PrismaClient){}
+
+        create(data: Prisma.${modelName}CreateInput) {
+          return this.prisma.${modelNameLower}.create({ data });
+        }
         
         find(args: Prisma.${modelName}FindManyArgs){
           return this.prisma.${modelNameLower}.findMany(args);
@@ -14,11 +18,7 @@ export const genClass = (modelName: string): string => {
         findOne(where: Prisma.${modelName}WhereUniqueInput){
           return this.prisma.${modelNameLower}.findUnique({ where });
         }
-
-        save(data: Prisma.${modelName}CreateInput){
-          return this.prisma.${modelNameLower}.create({ data });
-        }
-      
+        
         update(where: Prisma.${modelName}WhereUniqueInput, data: Prisma.${modelName}UpdateInput){
           return this.prisma.${modelNameLower}.update({
             where,
