@@ -8,17 +8,21 @@
 
 In _schema.prisma_
 
+```javascript
     generator crud {
       provider = "crud-class-generator"
       output   = "./crud-classes"
     }
+```
 
 In your code
 
-    export class PostsService extends PostCrud {
-      constructor(prismaService: PrismaService) {
-        super(prismaService);
-      }
-    }
+```javascript
+class PostsService extends PostCrud {
+  constructor(prismaService: PrismaService) {
+    super(prismaService)
+  }
+}
 
-    const posts = await postsSerrvice.find({});
+const posts = await postsSerrvice.find({})
+```
